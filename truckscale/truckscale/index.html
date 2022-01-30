@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>truckscale</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .container {
+        background-image: url("blue.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        border: 2px solid rgb(238, 248, 250);
+        border-radius: 15px;
+      }
+      row {
+        border: 1px solid rgb(238, 248, 250);
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-10 d-flex justify-content-between text-light p-2">
+      <div>
+        <span class="baslik font-size: xx-large text-center !important"
+          ><i
+            ><strong><h1>TruckScale</h1></strong></i
+          ></span
+        >
+      </div>
+      <div>
+        <button class="arka d-lg-inline">
+          <h4><b>YARDIM</b></h4>
+        </button>
+      </div>
+    </div>
+    <form>
+      <div class="container mt-10">
+        <div class="row position-relative mt-2 col-md-12 text-light">
+          <div class="col-4">
+            <h1>ARAC GIRIS ISLEMI</h1>
+            <div class="input-group mb-3">
+              <b
+                ><label for="a1" class="form-label">
+                  Yeni Plaka Giriniz</label
+                ></b
+              >
+
+              <input
+                type="text"
+                class="form1 form-control"
+                placeholder=""
+                aria-label="text with button"
+                aria-describedby="button-addon1"
+              />
+              <button
+                class="btn ekle1 btn-outline-light"
+                type="button"
+                id="button-addon1"
+              >
+                Ekle
+              </button>
+            </div>
+            <div class="input-group mb-3">
+              <b
+                ><label for="a1" class="form-label"
+                  >Aracin Darabasini Giriniz</label
+                ></b
+              >
+
+              <input
+                type="number"
+                class="form2 form-control"
+                placeholder=""
+                aria-label="text with button"
+                aria-describedby="button-addon1"
+              />
+              <button
+                class="btn ekle2 btn-outline-light"
+                type="button"
+                id="button-addon1"
+              >
+                Ekle
+              </button>
+            </div>
+          </div>
+          <div class="col-4">
+            <h5>
+              <ul class="liste position-absolite">
+                PLAKA LISTESI :
+              </ul>
+            </h5>
+            >
+          </div>
+          <div class="col-4">
+            <h5>
+              <ul class="listed position-absolite">
+                DARABA LISTESI :
+              </ul>
+            </h5>
+            >
+          </div>
+        </div>
+
+        <div class="row position-relative mt-5 col-md-12 text-light">
+          <div class="col-4">
+            <h1>ARAC CIKIS ISLEMI</h1>
+
+            <div class="mb-3">
+              <b
+                ><label for="a3" class="form-label"
+                  >PLAKA LISTESI'nden Plaka Seciniz</label
+                ></b
+              >
+              <input type="text" class="form3 form-control" id="a3" />
+            </div>
+            <div class="mb-3">
+              <b
+                ><label for="a4" class="form-label"
+                  >Kantarda Tartilan Toplam Agirligi Giriniz</label
+                ></b
+              >
+              <input type="number" class="form4 form-control" id="a4" />
+            </div>
+
+            <br />
+            <h3>
+              <div class="yuk position-absolite">
+                <label for="yuk font-size ">Yük Seciniz</label><br />
+
+                <input type="radio" name="yuk" id="kum" />
+                <label for="kum">Kum</label>
+
+                <input type="radio" name="yuk" id="cakil" />
+                <label for="cakil">Cakil</label><br />
+              </div>
+            </h3>
+            <div>
+              <button
+                class="hesapla btn-primary mt-4 position-absolite"
+                type="button"
+              >
+                HESAPLA
+              </button>
+            </div>
+            <b>
+              <button
+                class="btn yazdir1 btn-danger mt-4 position-absolite"
+                type="button"
+              >
+                YAZDIR
+              </button></b
+            >
+          </div>
+          <div class="col-4">
+            <section class="cikis-sag">
+              <h3 class="mesajPlaka mt-5">
+                Aracin Plaka Nosu: <span class="plakaNo"></span>
+              </h3>
+              <h3 class="mesaj-net mt-3">
+                Yükün Net Agirligi : <span class="net"></span>
+              </h3>
+              <h3 class="mesaj-tutar mt-3">
+                Yükün Tutarı : <span class="tutar"></span>
+              </h3>
+            </section>
+            <h3><span class="date mt-3"></span></h3>
+          </div>
+          <div class="sutun3 mt-5 col-4">
+            <b
+              ><p><span class="hud font-size-large"></span></p
+            ></b>
+          </div>
+        </div>
+        <div class="row position-relative mt-5 mb-5 col-md-12 text-light">
+          <div class="col-2">
+            <h1>ICMAL</h1>
+            <b
+              ><button
+                class="icmal btn-primary mt-4 position-absolite"
+                type="button"
+              >
+                ICMAL
+              </button></b
+            ><br />
+            <b
+              ><button
+                class="btn yazdir2 btn-danger mt-sm-4 position-absolite"
+                type="button"
+              >
+                YAZDIR
+              </button></b
+            >
+          </div>
+          <div class="col-6">
+            <section class="icmalOrta">
+              <h3 class="toplamArac mt-5">
+                Toplam Arac Sayisi: <span class="aracSayisi"></span>
+              </h3>
+              <h3 class="mesaj-net mt-3">
+                Yüklenen Toplam Ağırlık : <span class="nettoplam"></span>
+              </h3>
+              <h3 class="mesaj-tutar mt-3">
+                Toplam Tutar : <span class="tutartoplam"></span>
+              </h3>
+            </section>
+            <h3><span class="date1 mt-3"></span></h3>
+          </div>
+          <div class="sutun4 mt-5 col-4">
+            <b
+              ><p><span class="enfal font-size-large"></span></p
+            ></b>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="ocak.js"></script>
+  </body>
+</html>
